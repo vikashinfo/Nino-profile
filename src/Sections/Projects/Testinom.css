@@ -1,0 +1,18 @@
+.top-images Img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.top-images {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.card-conntet {
+  background: var(--bg-white);
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+.card-conntet:hover {
+  border-color: var(--btn-black);
+}

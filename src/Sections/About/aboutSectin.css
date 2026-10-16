@@ -1,0 +1,61 @@
+.marquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 20s linear infinite;
+  will-change: transform;
+}
+
+.marquee-group {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.company-logo {
+  width: 200px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  white-space: nowrap;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+/* Mobile responsive */
+@media (max-width: 576px) {
+  /* .company-logo {
+    width: 150px;
+    padding: 10px;
+  } */
+
+  .marquee-track {
+    animation-duration: 15s;
+  }
+}
+
+/* Respect reduced motion preferences */
+/* @media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+} */
